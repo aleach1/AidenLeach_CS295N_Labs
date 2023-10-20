@@ -1,9 +1,20 @@
-﻿
+﻿@model List<AllAboutWillWood.Models﻿.StoryPost>
 @{
     ViewData["Title"] = "Stories";
 }
 
-<h1 class="text-center">Stories</h1>
+<h1 class="text-center fw-bolder">Stories</h1>
 
-<p>Page to be completed soon</p>
+@foreach (var story in Model)
+{
+    <div class="container mt-5">
+        <h2>@story.Title</h2>
+        <h3>@story.Topic</h3>
+        <p>@story.Text <br> <div class="container mx-5"> -Circa @story.StoryYear</div></p>
+        <p><strong>Posted by:</strong> @story.Name <div class="fst-italic small m-0"> @story.DatePosted.ToShortDateString()</div></p>
+    </div>
+}
 
+<div class="container mt-lg-5">
+    <a href="@Url.Action("Story", "Home")" class="btn btn-warning">Contribute Your Story</a>
+</div>
