@@ -2,23 +2,23 @@
 
 <form asp-action="Story" asp-controller="Home" method="post">
     <div class="form-group">
-        <label>Title:</label>
+        <label class="text-decoration-underline">Title:</label>
         <input asp-for="Title" class="form-control" required /><br />
     </div>
     <div class="form-group">
-        <label>Topic:</label>
+        <label class="text-decoration-underline">Topic:</label>
         <input asp-for="Topic" class="form-control" required /><br />
     </div>
     <div class="form-group">
-        <label>Year the Story Occured:</label>
+        <label class="text-decoration-underline">Year the Story Occured:</label>
         <input type="number" asp-for="StoryYear" class="form-control" required /><br />
     </div>
     <div class="form-group">
-        <label>Text:</label>
+        <label class="text-decoration-underline">Text:</label>
         <textarea asp-for="Text" class="form-control" required></textarea><br />
     </div>
     <div class="form-group">
-        <label>Name:</label>
+        <label class="text-decoration-underline">Name:</label>
         <input asp-for="Name" class="form-control" required /><br />
     </div>
     <input type="hidden" asp-for="DatePosted" value="DateTime.Now" />
